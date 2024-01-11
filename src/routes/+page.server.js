@@ -18,8 +18,6 @@ export async function load({ page }) {
     },
   });
 
-  console.log(content);
-
   // return content from `fetchOneEntry()`
   return {
     props: {

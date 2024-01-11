@@ -6,7 +6,7 @@
   const YOUR_API_KEY = "fe07520489dd4741b861fe3c2e19b071";
   export let content;
 
-  console.log("Content prop:", content);
+  // console.log("Content prop: ", content);
 </script>
 
 <main>
