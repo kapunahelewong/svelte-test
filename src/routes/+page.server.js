@@ -1,27 +1,21 @@
+import { fetchEntries } from '@builder.io/sdk-svelte';
 
-// src/routes/+page.server.js
-import { fetchOneEntry } from '@builder.io/sdk-svelte';
-
-export async function load({ page }) {
-  if (!page) {
-    page = []; // Set a default value if page is not provided
-  }
-
-  const urlPath = `/${page.join('/')}`;
+export async function load({ params }) {
+  const urlPath = `/${params.page || ''}`;
 
   // fetch your Builder content
-  const content = await fetchOneEntry({
-    model: 'page',
+  const content = await fetchEntries({
+    model: 'page', 
     apiKey: "fe07520489dd4741b861fe3c2e19b071",
     userAttributes: {
       urlPath,
     },
   });
 
-  // return content from `fetchOneEntry()`
+  console.log("Content prop in page.server.js: ", content);
+  
+  // return content from `fetchEntries()`
   return {
-    props: {
-      content,
-    },
+    content
   };
 }
