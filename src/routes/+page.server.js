@@ -1,10 +1,10 @@
-import { fetchEntries } from '@builder.io/sdk-svelte';
+import { fetchEntries, fetchOneEntry } from '@builder.io/sdk-svelte';
 
 export async function load({ params }) {
   const urlPath = `/${params.page || ''}`;
 
   // fetch your Builder content
-  const content = await fetchEntries({
+  const content = await fetchOneEntry({
     model: 'page', 
     apiKey: "fe07520489dd4741b861fe3c2e19b071",
     userAttributes: {
@@ -14,7 +14,7 @@ export async function load({ params }) {
 
   console.log("Content prop in page.server.js: ", content);
   
-  // return content from `fetchEntries()`
+  // return content 
   return {
     content
   };

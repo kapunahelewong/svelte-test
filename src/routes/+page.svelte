@@ -8,7 +8,6 @@
 
   console.log("Content prop in page.svelte: ", content);
   // console.log("Page:  ", page);
-  
 </script>
 
 <main>
