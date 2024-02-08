@@ -16,7 +16,7 @@
 
   <!-- {#if content || isPreviewing()} -->
   <!-- Render builder content with all required props -->
-  <Content model="page" {content} apiKey={YOUR_API_KEY} />
+  <Content model="page" content={entries[0]} apiKey={YOUR_API_KEY} />
   <!-- {:else} -->
   <!-- <p>Loading...</p> -->
   <!-- {/if} -->

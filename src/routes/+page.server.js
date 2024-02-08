@@ -4,7 +4,7 @@ export async function load({ params }) {
   const urlPath = `/${params.page || ''}`;
 
   // fetch your Builder content
-  const content = await fetchOneEntry({
+  const content = await fetchEntries({
     model: 'page', 
     apiKey: "fe07520489dd4741b861fe3c2e19b071",
     userAttributes: {
